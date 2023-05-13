@@ -1,0 +1,216 @@
+
+/* 1 esercizio
+Scrivi un programma che chiede all'utente di inserire un numero e poi mostra il quadrato di quel numero.
+
+soluzione:
+const num = prompt("inserisci un numero:")
+const piazza = num * num;
+console.log(`il quadrato di ${num} è ${piazza}!`);
+
+
+
+2 esercizio
+Scrivi una funzione che accetta un array di numeri come parametro e restituisce la somma di tutti i numeri nell'array.
+
+soluzione:
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+function sommaArray() {
+    let somma = 0;
+    for (let i = 0; i < array.length; i++) {
+        somma += array[i]
+    }
+    return somma;
+}
+
+const result = sommaArray();
+console.log(`la somma di ${array} è ${result}.`);
+
+3 esercizio
+Scrivi una funzione che accetta una stringa come parametro e restituisce la stessa stringa con le parole in ordine inverso.
+
+soluzione:
+const string = "La mia mamma mi ha detto di fare i compiti";
+
+function paroleReverse(string) {
+    const parole = string.split(" ");
+    const paroleReversed = parole.reverse();
+    const stringaReverse = paroleReversed.join(" ");
+    return stringaReverse;
+}
+
+const result = paroleReverse(string);
+console.log(`La stringa invertita è: ${result}`);
+
+4 esercizio
+Scrivi una funzione che accetta una stringa come parametro e restituisce true se la stringa è un pangramma (ovvero se contiene tutte le lettere dell'alfabeto) e false altrimenti.
+
+soluzione:
+const string = "abcdefghijklmnopqrstuvwxyz"
+
+function isPangram(string) {
+    const alfabeto = "abcdefghijklmnopqrstuvwxyz";
+    const stringaMinuscola = string.toLowerCase();
+    for (let i = 0; i< alfabeto.length; i++) {
+        if (stringaMinuscola.indexOf(alfabeto[i]) === -1) {
+            return false;            
+        } return true;       
+    }
+}
+
+const result = isPangram(string);
+console.log(`La stringa: ${string} è un pangramma? ${result}`);
+
+5 esercizio
+Scrivi una funzione che accetta un array di stringhe come parametro e restituisce la stringa più lunga nell'array.
+
+soluzione:
+function trovaStringaPiuLunga(array) {
+    let stringaPiuLunga = '';
+    
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].length > stringaPiuLunga.length) {
+        stringaPiuLunga = array[i];
+      }
+    }
+    
+    return stringaPiuLunga;
+  }
+  
+  const arrayDiStringhe = ["milano", "bergamo", "alessandria"];
+  const stringaPiuLunga = trovaStringaPiuLunga(arrayDiStringhe);
+  
+  console.log(`La stringa più lunga dell'array è: ${stringaPiuLunga}`)
+
+
+6 esercizio
+Scrivi un programma che genera un numero casuale tra 1 e 100 e poi chiede all'utente di indovinare il numero generato. Il programma deve dare indizi all'utente se il numero inserito è troppo alto o troppo basso, fino a quando l'utente non indovina il numero corretto.
+
+soluzione:
+const numeroCasuale = Math.floor(Math.random()* 100) + 1;
+
+let numeroTentativi = 0;
+
+let numeroInserito;
+do {
+    numeroInserito = parseInt(prompt("indovina il numero (tra 1 e 100:"));
+    numeroTentativi++;
+
+    if (numeroInserito > numeroCasuale) {
+        alert("il numero inserito è troppo alto!")    
+    } else if (numeroInserito < numeroCasuale) {
+        alert("il numero inserito è troppo basso!");
+    }
+} while (numeroInserito !== numeroCasuale);
+
+alert(`hai indovinato il numero in ${numeroTentativi} tentativi!`);
+
+
+7 esercizio
+Scrivi un programma che chiede all'utente di inserire due numeri e poi mostra il maggiore dei due.
+
+soluzione:
+const numero1 = prompt("inserisci il primo numero");
+const numero2 = prompt("inserisci il secondo numero");
+
+if (numero1 > numero2 ) {
+    alert("il maggiore è il primo numero");
+}
+else {
+    alert("il maggiore è il secondo numero");
+}
+
+
+8 esercizio 
+Scrivi un programma che chiede all'utente di inserire i gradi Celsius e poi converte la temperatura in gradi Fahrenheit e mostra il risultato.
+
+soluzione:
+const celsius = parseInt(prompt("Indica il numero che vuoi convertire da clesius in Fahrenheit"));
+const fahrenheit = celsius * 1.8 + 32;
+
+alert(`il numero scritto convertito in fahrenheit equivale a ${fahrenheit}`);
+
+
+9 esercizio
+Scrivi un programma che chiede all'utente di inserire tre numeri e poi calcola e mostra la media dei tre numeri.
+
+soluzione:
+const num1 = prompt("Inserisci il primo numero:");
+const num2 = prompt("Inserisci il secondo numero:");
+const num3 = prompt("Inserisci il terzo numero:");
+
+const media = (parseInt(num1) + parseInt(num2) + parseInt(num3)) / 3;
+
+alert(`La media dei tre numeri è ${media}`);
+
+
+10 esercizio
+Scrivi un programma che stampa i numeri da 1 a 10.
+
+soluzione:
+for (let i = 0; i <= 11; i++) {
+    alert([i]);
+}
+
+
+11 esercizio
+Scrivi un programma che chiede all'utente di inserire la base e l'altezza di un rettangolo e poi calcola e mostra l'area del rettangolo.
+
+soluzione:
+const base = prompt("Inserisci la base del rettangolo:");
+const altezza = prompt("Inserisci l'altezza del rettangolo:");
+
+const area = base * altezza;
+
+console.log(`L'area del rettangolo è ${area}`); 
+
+
+12 esercizio 
+Trova il numero più grande in un array scrivi una funzione che accetta un array di numeri come parametro e restituisce il numero più grande nell'array.
+
+Soluzione:
+const numeri = [10, 5, 23, 85, 8, 15];
+
+function trovaNumeroMaggiore(array) {
+    let maggiore = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if(array[i] > maggiore) {
+            maggiore = array[i];
+        }
+    } return maggiore
+}
+
+const maggiore = trovaNumeroMaggiore(numeri);
+alert(`Il numero più grande nell'array è ${maggiore}`)
+
+
+13 esercizio
+raddoppiare i numeri e aggiungerli in un altro array vuoto.
+
+soluzione:
+const numeri = [2, 3, 4, 5, 6, 7, 8];
+const numeriRaddoppiati = [];
+numeri.forEach(function(numero) {
+    numeriRaddoppiati.push(numero * 2)
+});
+console.log(numeriRaddoppiati);
+
+
+14 esercizio
+inserisci in un array vuoto solo i numeri pari
+
+soluzione:
+function trovaNumeriPari(array) {
+    let numeriPari = [];
+
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            numeriPari.push(array[i]);
+        }
+    } return numeriPari
+}
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let numeriPari = trovaNumeriPari(array);
+console.log(numeriPari);
+*/
