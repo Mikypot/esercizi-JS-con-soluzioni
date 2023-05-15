@@ -1,5 +1,6 @@
+Mi scuso anticipatamente se durante l'esercitazione ci potrebbe essere qualche errore di dicitura grammaticale o del codice.
 
-/* 1 esercizio
+esercizio 1 
 Scrivi un programma che chiede all'utente di inserire un numero e poi mostra il quadrato di quel numero.
 
 soluzione:
@@ -8,8 +9,7 @@ const piazza = num * num;
 console.log(`il quadrato di ${num} è ${piazza}!`);
 
 
-
-2 esercizio
+esercizio 2 
 Scrivi una funzione che accetta un array di numeri come parametro e restituisce la somma di tutti i numeri nell'array.
 
 soluzione:
@@ -26,7 +26,8 @@ function sommaArray() {
 const result = sommaArray();
 console.log(`la somma di ${array} è ${result}.`);
 
-3 esercizio
+
+esercizio 3 
 Scrivi una funzione che accetta una stringa come parametro e restituisce la stessa stringa con le parole in ordine inverso.
 
 soluzione:
@@ -42,7 +43,8 @@ function paroleReverse(string) {
 const result = paroleReverse(string);
 console.log(`La stringa invertita è: ${result}`);
 
-4 esercizio
+
+esercizio 4 
 Scrivi una funzione che accetta una stringa come parametro e restituisce true se la stringa è un pangramma (ovvero se contiene tutte le lettere dell'alfabeto) e false altrimenti.
 
 soluzione:
@@ -61,7 +63,8 @@ function isPangram(string) {
 const result = isPangram(string);
 console.log(`La stringa: ${string} è un pangramma? ${result}`);
 
-5 esercizio
+
+esercizio 5 
 Scrivi una funzione che accetta un array di stringhe come parametro e restituisce la stringa più lunga nell'array.
 
 soluzione:
@@ -83,7 +86,7 @@ function trovaStringaPiuLunga(array) {
   console.log(`La stringa più lunga dell'array è: ${stringaPiuLunga}`)
 
 
-6 esercizio
+esercizio 6 
 Scrivi un programma che genera un numero casuale tra 1 e 100 e poi chiede all'utente di indovinare il numero generato. Il programma deve dare indizi all'utente se il numero inserito è troppo alto o troppo basso, fino a quando l'utente non indovina il numero corretto.
 
 soluzione:
@@ -106,7 +109,7 @@ do {
 alert(`hai indovinato il numero in ${numeroTentativi} tentativi!`);
 
 
-7 esercizio
+esercizio 7 
 Scrivi un programma che chiede all'utente di inserire due numeri e poi mostra il maggiore dei due.
 
 soluzione:
@@ -121,7 +124,7 @@ else {
 }
 
 
-8 esercizio 
+esercizio 8 
 Scrivi un programma che chiede all'utente di inserire i gradi Celsius e poi converte la temperatura in gradi Fahrenheit e mostra il risultato.
 
 soluzione:
@@ -131,7 +134,7 @@ const fahrenheit = celsius * 1.8 + 32;
 alert(`il numero scritto convertito in fahrenheit equivale a ${fahrenheit}`);
 
 
-9 esercizio
+esercizio 9 
 Scrivi un programma che chiede all'utente di inserire tre numeri e poi calcola e mostra la media dei tre numeri.
 
 soluzione:
@@ -144,7 +147,7 @@ const media = (parseInt(num1) + parseInt(num2) + parseInt(num3)) / 3;
 alert(`La media dei tre numeri è ${media}`);
 
 
-10 esercizio
+esercizio 10 
 Scrivi un programma che stampa i numeri da 1 a 10.
 
 soluzione:
@@ -153,7 +156,7 @@ for (let i = 0; i <= 11; i++) {
 }
 
 
-11 esercizio
+esercizio 11 
 Scrivi un programma che chiede all'utente di inserire la base e l'altezza di un rettangolo e poi calcola e mostra l'area del rettangolo.
 
 soluzione:
@@ -165,7 +168,7 @@ const area = base * altezza;
 console.log(`L'area del rettangolo è ${area}`); 
 
 
-12 esercizio 
+esercizio 12 
 Trova il numero più grande in un array scrivi una funzione che accetta un array di numeri come parametro e restituisce il numero più grande nell'array.
 
 Soluzione:
@@ -184,7 +187,7 @@ const maggiore = trovaNumeroMaggiore(numeri);
 alert(`Il numero più grande nell'array è ${maggiore}`)
 
 
-13 esercizio
+esercizio 13 
 raddoppiare i numeri e aggiungerli in un altro array vuoto.
 
 soluzione:
@@ -196,7 +199,7 @@ numeri.forEach(function(numero) {
 console.log(numeriRaddoppiati);
 
 
-14 esercizio
+esercizio 14 
 inserisci in un array vuoto solo i numeri pari
 
 soluzione:
@@ -213,4 +216,160 @@ function trovaNumeriPari(array) {
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let numeriPari = trovaNumeriPari(array);
 console.log(numeriPari);
-*/
+
+
+esercizio 15 
+Somma delle proprietà numeriche
+
+soluzione:
+const obj = {
+    a: 10,
+    b: 50,
+    c: 30
+}
+
+let sum = 0;
+
+for (let key in obj) {
+    if (typeof obj[key] === "number") {
+        sum += obj[key];
+    }  
+}
+
+console.log("somma:", sum);
+
+
+esercizio 16 
+Conta le stringhe
+
+soluzione:
+const obj = {
+    a: "ciao",
+    b: 123,
+    c: "mondo",
+    d: true
+}
+
+let count = 0;
+
+for (const key in obj) {
+    if (typeof obj[key] === "string") {
+        count++;
+    }
+}
+
+console.log("numero di stringhe:", count);
+
+
+esercizio 17 
+Concatena le proprietà di tipo String
+
+soluzione:
+const obj = {
+    a: "ciao",
+    b: 1234,
+    c: "mondo",
+    d: true,
+    e: "intero"
+}
+
+let result = "";
+
+for (const key in obj) {
+    if (typeof obj[key] === "string") {
+        result += " " + obj[key];
+    }
+}
+
+console.log("risultato:", result);
+
+
+esercizio 18 
+fai la somma degli elementi contenuti nell'array con il ciclo for of
+
+soluzione:
+const numbers = [10, 20, 30, 40, 50];
+
+let sum = 0;
+
+for (const index of numbers) {
+    sum += index;
+}
+
+console.log("somma:", sum);
+
+
+esercizio 19
+Filtra gli elementi di un array
+
+soluzione:
+const numbers = [10, 20, 30, 40, 50, 60];
+
+let numeriFiltrati = [];
+
+for (const index of numbers) {
+    if (index > 20) {
+        numeriFiltrati.push(index);
+    }
+}
+
+console.log("i numeri filtrati sono:", numeriFiltrati);
+
+
+esercizio 20
+Calcola la lunghezza media delle parole in un array di stringhe
+
+soluzione:
+const parole = ["ciao", "mondo", "javascript", "esercizi"];
+
+let lunghezzaTotale = 0;
+
+for (const index of parole) {
+    lunghezzaTotale += parole.length;
+}
+
+const lunghezzaMedia = lunghezzaTotale / parole.length;
+
+console.log("la lunghezza media delle parole è:", lunghezzaMedia);
+
+
+esercizio 21
+Conta fino ad un numero specifico utilizzando un ciclo while
+
+soluzione:
+const fine = 50;
+
+while (inizio <= 50) {
+    console.log(inizio);
+    inizio++;
+}
+
+esercizio 22
+Genera numeri casuali fino a quando non viene generato un numero pari utilizzando un ciclo do while
+
+soluzione:
+let numeriCasuali;
+
+do {
+    numeriCasuali = Math.floor(Math.random() * 150) + 1;
+    console.log(numeriCasuali);
+} while (numeriCasuali % 2 === 0);
+
+
+esercizio 23
+Genera una semplice descrizione con il tuo nome, cognome, anni e professione utilizzando una constructor function
+
+soluzione:
+function Persona (nome, cognome, anni, professione) {
+    this.nome = nome;
+    this.cognome = cognome;
+    this.anni = anni;
+    this.professione = professione
+
+    this.saluta = function() {
+        console.log("ciao mi chiamo " + this.nome + " " + this.cognome + " e ho " + this.anni + " anni. Come professione faccio lo " + this.professione);
+    };
+}
+
+const persona1 = new Persona("Mario", "Rossi", 22, "sviluppatore web");
+persona1.saluta();
