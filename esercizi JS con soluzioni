@@ -5,8 +5,8 @@ Scrivi un programma che chiede all'utente di inserire un numero e poi mostra il 
 
 soluzione:
 const num = prompt("inserisci un numero:")
-const piazza = num * num;
-console.log(`il quadrato di ${num} è ${piazza}!`);
+const molt = num * num;
+console.log(`il quadrato di ${num} è ${molt}!`);
 
 
 esercizio 2 
@@ -80,7 +80,7 @@ function trovaStringaPiuLunga(array) {
     return stringaPiuLunga;
   }
   
-  const arrayDiStringhe = ["milano", "bergamo", "alessandria"];
+  const arrayDiStringhe = ["Milano", "Bergamo", "Bologna"];
   const stringaPiuLunga = trovaStringaPiuLunga(arrayDiStringhe);
   
   console.log(`La stringa più lunga dell'array è: ${stringaPiuLunga}`)
@@ -119,8 +119,11 @@ const numero2 = prompt("inserisci il secondo numero");
 if (numero1 > numero2 ) {
     alert("il maggiore è il primo numero");
 }
-else {
+else if ( numero1 < numero2 ){
     alert("il maggiore è il secondo numero");
+}
+else {
+    alert("i numeri sono uguali")
 }
 
 
